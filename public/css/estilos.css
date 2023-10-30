@@ -5,7 +5,8 @@
     --bg-header: #eac926;
     --bg-white: #ffffff;
     --text-black: #181818;
-    --text-footer: #666;
+    --text-gris-oscuro: #666;
+    --border-gris: #ebebeb;
     --azul: #03264c;
     --celeste: #1259c3;
     --gris-claro: #ebebeb;
@@ -30,7 +31,6 @@ body {
     font-size: 12px;
     background-color: var(--bg-header);
 }
-
 .header__img {
     width: 200px;
     padding: 20px;
@@ -42,6 +42,10 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
+
+.nav {
+    display: none;
+}
 .nav__ul {
     margin-bottom: 20px;
 }
@@ -52,6 +56,7 @@ body {
     color: var(--text-black);
     text-decoration: none;
 }
+
 .nav__mobile {
     width: 100%;
     text-align: center;
@@ -73,59 +78,85 @@ img {
     width: 100%;
 }
 
-.section__h2 {
-    font-size: 24px;
-    margin: 20px 0 20px 10px;
+main {
+    width: 90%;
+    margin: auto;
 }
 
-.section__card {
+.section__h2 {
+    font-size: 26px;
+    margin: 20px 0 20px 0;
+    color: var(--text-gris-oscuro);
+}
+.article__card {
     background-color: var(--bg-white);
-    margin: 2% 5% 2% 5%;
+    margin: 10px 0 10px 0;
+}
+.card__div {
+    width: 100%;
+    border-top: 1px solid var(--border-gris);
     padding: 5%;
-    text-align: center;
+}
+.card__envio {
+    border: 1px solid var(--verde);
+    color: var(--verde);
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 .card__precio {
     font-size: 18px;
-    text-decoration: underline;
     font-weight: 500;
-    margin: 5px;
+    color: var(--azul);
 }
 .card__descuento {
     font-size: 16px;
-    margin: 5px;
+    color: var(--verde);
 }
 .card__descripcion {
     font-size: 16px;
-    margin: 5px;
+    color: var(--text-gris-oscuro);
+    margin-top: 25px;
+    display: none;
 }
 
 .footer {
     background-color: var(--bg-white);
-    color: var(--text-footer);
-    position: relative;
+    color: var(--text-gris-oscuro);
     margin: 2%;
 }
-
 .footer__div {
     margin-top: 30px;
     text-align: center;
 }
-
 .footer__p {
     width: 60%;
-    position: relative;
-    left: 20%;
+    margin: auto;
     font-size: 12px;
 }
-
 .footer__icons {
     color: var(--celeste);
     font-size: 2em;
     margin: 50px 0 10px 0;
 }
-
 .footer__copy {
     margin: 50px 0 0 15px;
     padding-bottom: 30px;
     font-weight: 400;
+}
+
+@media (min-width: 361px) {
+    .nav {
+        display: block;
+    }
+    .card__descripcion {
+        display: block;
+    }
+    .article__card {
+        box-shadow: 0px 0px 10px #646464;
+    }
+    .nav__mobile {
+        display: none;
+    }
 }
