@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+    /* colors */
+    --bg-header: #eac926;
+    --bg-white: #ffffff;
+    --text-black: #181818;
+    --text-footer: #666;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    /* fonts */
+    --font-roboto: "Roboto", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-black);
+    font-family: var(--font-roboto);
+    background-color: var(--gris-claro);
+}
+
+.header {
+    font-size: 12px;
+    background-color: var(--bg-header);
+}
+
+.header__img {
+    width: 200px;
+    padding: 20px;
+}
+.header__div {
+    margin: 0 0 20px 20px;
+}
+.header__p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.nav__ul {
+    margin-bottom: 20px;
+}
+.nav__li {
+    margin-bottom: 2px;
+}
+.nav__a {
+    color: var(--text-black);
+    text-decoration: none;
+}
+.nav__mobile {
+    width: 100%;
+    text-align: center;
+}
+.mobile__btn {
+    padding: 10px 13px 10px 13px;
+    background-color: var(--celeste);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 0px;
+}
+.mobile__btn--i {
+    font-size: 20px;
+    color: var(--gris-claro);
+}
+
+img {
+    width: 100%;
+}
+
+.section__h2 {
+    font-size: 24px;
+    margin: 20px 0 20px 10px;
+}
+
+.section__card {
+    background-color: var(--bg-white);
+    margin: 2% 5% 2% 5%;
+    padding: 5%;
+    text-align: center;
+}
+.card__precio {
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 500;
+    margin: 5px;
+}
+.card__descuento {
+    font-size: 16px;
+    margin: 5px;
+}
+.card__descripcion {
+    font-size: 16px;
+    margin: 5px;
+}
+
+.footer {
+    background-color: var(--bg-white);
+    color: var(--text-footer);
+    position: relative;
+    margin: 2%;
+}
+
+.footer__div {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer__p {
+    width: 60%;
+    position: relative;
+    left: 20%;
+    font-size: 12px;
+}
+
+.footer__icons {
+    color: var(--celeste);
+    font-size: 2em;
+    margin: 50px 0 10px 0;
+}
+
+.footer__copy {
+    margin: 50px 0 0 15px;
+    padding-bottom: 30px;
+    font-weight: 400;
+}
