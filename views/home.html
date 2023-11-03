@@ -13,180 +13,223 @@
         />
     </head>
     <body>
-        <header class="header">
-            <img
-                src="./img/logo-mercado-liebre.svg"
-                alt="Logo Mercado liebre"
-                class="header__img"
-            />
+        <header>
+            <div class="header__logo">
+                <img
+                    src="/img/logo-mercado-liebre.svg"
+                    alt="Logo Mercado liebre"
+                    class="logo__img"
+                />
+            </div>
 
-            <div class="header__div">
-                <input type="search" placeholder="Buscar productos, marcas" />
-                <button>
+            <div class="header__search">
+                <input
+                    class="search__input"
+                    type="search"
+                    placeholder="Buscar productos, marcas"
+                />
+                <button class="search__btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
 
-            <p class="header__p">
-                <i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas
-                y sin tarjeta de crédito
-            </p>
-
-            <nav>
-                <div class="nav">
-                    <ul class="nav__ul">
-                        <li class="nav__li">
-                            <a class="nav__a" href="">Ofertas</a>
-                        </li>
-                        <li class="nav__li">
-                            <a class="nav__a" href="">Tiendas Oficiales</a>
-                        </li>
-                        <li class="nav__li">
-                            <a class="nav__a" href="">Vender</a>
-                        </li>
-                        <li class="nav__li">
-                            <a class="nav__a" href="">Ayuda</a>
-                        </li>
-                    </ul>
-
-                    <ul class="nav__ul">
-                        <li class="nav__li">
-                            <a class="nav__a" href=""
-                                >Creá tu cuenta
-                                <i class="fa-regular fa-id-card"></i
-                            ></a>
-                        </li>
-                        <li class="nav__li">
-                            <a class="nav__a" href=""
-                                >Ingresá
-                                <i class="fa-solid fa-right-to-bracket"></i
-                            ></a>
-                        </li>
-                        <li class="nav__li">
-                            <a class="nav__a" href=""
-                                >Mis compras
-                                <i class="fa-solid fa-cart-shopping"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="nav__mobile">
-                    <button class="mobile__btn">
-                        <i class="fa-solid fa-bars mobile__btn--i"></i>
-                    </button>
-                </div>
-            </nav>
-
-            <img src="./img/img-home-banner.jpg" alt="banner" />
+            <div class="header__cuotas">
+                <p class="cuotas-p">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>Comprá en
+                    cuotas y sin tarjeta de crédito
+                </p>
+            </div>
         </header>
+        <nav>
+            <div class="nav__div">
+                <ul class="nav__ul">
+                    <li class="nav__li">
+                        <a class="nav__a" href="">Ofertas</a>
+                    </li>
+                    <li class="nav__li">
+                        <a class="nav__a" href="">Tiendas Oficiales</a>
+                    </li>
+                    <li class="nav__li">
+                        <a class="nav__a" href="">Vender</a>
+                    </li>
+                    <li class="nav__li">
+                        <a class="nav__a" href="">Ayuda</a>
+                    </li>
+                </ul>
+
+                <ul class="nav__ul">
+                    <li class="nav__li">
+                        <a class="nav__a" href=""
+                            >Creá tu cuenta <i class="fa-regular fa-id-card"></i
+                        ></a>
+                    </li>
+                    <li class="nav__li">
+                        <a class="nav__a" href=""
+                            >Ingresá <i class="fa-solid fa-right-to-bracket"></i
+                        ></a>
+                    </li>
+                    <li class="nav__li">
+                        <a class="nav__a" href=""
+                            >Mis compras
+                            <i class="fa-solid fa-cart-shopping"></i
+                        ></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__mobile">
+                <button class="mobile__btn">
+                    <i class="fa-solid fa-bars mobile__btn--i"></i>
+                </button>
+            </div>
+        </nav>
+
+        <img class="banner" src="./img/img-home-banner.jpg" alt="banner" />
 
         <main>
             <section>
-                <h2 class="section__h2">Basado en tu última visita</h2>
-                <article class="article__card">
-                    <img
-                        src="./img/img-cafetera-moulinex.jpg"
-                        alt="Cafetera Moulinex"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$6.770</p>
-                        <p class="card__descuento">40% OFF</p>
-                        <h4 class="card__descripcion">Cafetera Moulinex</h4>
+                <article class="section__article">
+                    <h2 class="section__h2">Basado en tu última visita</h2>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-cafetera-moulinex.jpg"
+                            alt="Cafetera Moulinex"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$6.770</p>
+                                <p class="card__descuento">40% OFF</p>
+                            </div>
+                            <h4 class="card__descripcion">Cafetera Moulinex</h4>
+                        </div>
                     </div>
-                </article>
-                <article class="article__card">
-                    <img
-                        src="./img/img-macbook-pro-2019.jpg"
-                        alt="MacBook Pro 2019"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$230.000</p>
-                        <p class="card__descuento">20% off</p>
-                        <h4 class="card__descripcion">MacBook Pro 2019</h4>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-macbook-pro-2019.jpg"
+                            alt="MacBook Pro 2019"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$230.000</p>
+                                <p class="card__descuento">20% off</p>
+                            </div>
+                            <h4 class="card__descripcion">MacBook Pro 2019</h4>
+                        </div>
                     </div>
-                </article>
-                <article class="article__card">
-                    <img
-                        src="./img/img-samsung-galaxy-s10.jpg"
-                        alt="Samsung Galaxy S10"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$70.500</p>
-                        <p class="card__descuento">10% off</p>
-                        <h4 class="card__descripcion">Samsung Galaxy S10</h4>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-samsung-galaxy-s10.jpg"
+                            alt="Samsung Galaxy S10"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$70.500</p>
+                                <p class="card__descuento">10% off</p>
+                            </div>
+                            <h4 class="card__descripcion">
+                                Samsung Galaxy S10
+                            </h4>
+                        </div>
                     </div>
-                </article>
-                <article class="article__card">
-                    <img
-                        src="./img/img-tv-samsung-smart.jpg"
-                        alt="SmartTv Samsung 43"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$23.200</p>
-                        <p class="card__descuento">5% off</p>
-                        <h4 class="card__descripcion">SmartTv Samsung 43"</h4>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-tv-samsung-smart.jpg"
+                            alt="SmartTv Samsung 43"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$23.200</p>
+                                <p class="card__descuento">5% off</p>
+                            </div>
+                            <h4 class="card__descripcion">
+                                SmartTv Samsung 43"
+                            </h4>
+                        </div>
                     </div>
                 </article>
             </section>
+
             <section>
-                <h2 class="section__h2">Ofertas</h2>
-                <article class="article__card">
-                    <img
-                        src="./img/img-cafetera-moulinex.jpg"
-                        alt="Cafetera Moulinex"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$6.770</p>
-                        <p class="card__descuento">40% off</p>
-                        <h4 class="card__descripcion">Cafetera Moulinex</h4>
+                
+                <article class="section__article">
+                    <h2 class="section__h2">Ofertas</h2>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-cafetera-moulinex.jpg"
+                            alt="Cafetera Moulinex"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$6.770</p>
+                                <p class="card__descuento">40% off</p>
+                            </div>
+                            <h4 class="card__descripcion">Cafetera Moulinex</h4>
+                        </div>
                     </div>
-                </article>
-                <article class="article__card">
-                    <img
-                        src="./img/img-macbook-pro-2019.jpg"
-                        alt="MacBook Pro 2019"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$230.000</p>
-                        <p class="card__descuento">20% off</p>
-                        <h4 class="card__descripcion">MacBook Pro 2019</h4>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-macbook-pro-2019.jpg"
+                            alt="MacBook Pro 2019"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$230.000</p>
+                                <p class="card__descuento">20% off</p>
+                            </div>
+                            <h4 class="card__descripcion">MacBook Pro 2019</h4>
+                        </div>
                     </div>
-                </article>
-                <article class="article__card">
-                    <img
-                        src="./img/img-samsung-galaxy-s10.jpg"
-                        alt="Samsung Galaxy S10"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$70.500</p>
-                        <p class="card__descuento">10% off</p>
-                        <h4 class="card__descripcion">Samsung Galaxy S10</h4>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-samsung-galaxy-s10.jpg"
+                            alt="Samsung Galaxy S10"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$70.500</p>
+                                <p class="card__descuento">10% off</p>
+                            </div>
+                            <h4 class="card__descripcion">
+                                Samsung Galaxy S10
+                            </h4>
+                        </div>
                     </div>
-                </article>
-                <article class="article__card">
-                    <img
-                        src="./img/img-tv-samsung-smart.jpg"
-                        alt="SmartTv Samsung 43"
-                    />
-                    <div class="card__div">
-                        <i class="fa-solid fa-truck card__envio"></i>
-                        <p class="card__precio">$23.200</p>
-                        <p class="card__descuento">5% off</p>
-                        <h4 class="card__descripcion">SmartTv Samsung 43"</h4>
+                    <div class="div__card">
+                        <img
+                            src="./img/img-tv-samsung-smart.jpg"
+                            alt="SmartTv Samsung 43"
+                            class="card__img"
+                        />
+                        <div class="card__div">
+                            <i class="fa-solid fa-truck card__envio"></i>
+                            <div class="card__importe">
+                                <p class="card__precio">$23.200</p>
+                                <p class="card__descuento">5% off</p>
+                            </div>
+                            <h4 class="card__descripcion">
+                                SmartTv Samsung 43"
+                            </h4>
+                        </div>
                     </div>
                 </article>
             </section>
         </main>
 
-        <footer class="footer">
+        <footer>
             <div class="footer__div">
                 <i class="fa-solid fa-credit-card footer__icons"></i>
                 <h4>Pagá con tarjeta o en efectivo</h4>
@@ -209,7 +252,7 @@
                 <h4>Seguridad, de principio a fin</h4>
                 <p class="footer__p">
                     ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que
-                    no puedas hacer, porque estás siempre protegid@.
+                    no puedas hacer porque estás siempre protegid@.
                 </p>
             </div>
             <h5 class="footer__copy">

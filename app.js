@@ -5,6 +5,7 @@ const app = express();
 
 app.use(express.static(path.resolve("public")));
 
+
 app.get("/", (req, res) => {
     res.sendFile(path.resolve("views", "home.html"));
 });
