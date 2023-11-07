@@ -37,7 +37,7 @@ header {
 .header__logo {
     width: 50%;
 }
-.logo__img {
+.header__logo--img {
     width: 10rem;
     padding: 1rem;
 }
@@ -47,7 +47,7 @@ header {
     align-items: center;
     width: 50%;
 }
-.search__input {
+.header__search--input {
     height: 2.1rem;
     width: 80%;
     border: 0;
@@ -55,10 +55,10 @@ header {
     padding-left: 0.6rem;
     padding-right: 0.2rem;
 }
-.search__input:focus {
+.header__search--input:focus {
     outline: none;
 }
-.search__btn {
+.header__search--btn {
     height: 2.1rem;
     border: 0;
     border-radius: 0 0.5rem 0.5rem 0;
@@ -68,10 +68,9 @@ header {
 .header__cuotas {
     width: 100%;
 }
-.cuotas-p {
+.header__cuotas--p {
     text-align: center;
 }
-
 nav {
     font-size: 13px;
     width: 100%;
@@ -82,7 +81,6 @@ nav {
 .nav__ul {
     margin-bottom: 1.25rem;
     display: flex;
-    width: 21.8rem;
     justify-content: space-evenly;
     list-style: none;
 }
@@ -101,7 +99,7 @@ nav {
     width: 100%;
     text-align: center;
 }
-.mobile__btn {
+.nav__mobile--btn {
     padding: 0.6rem 0.8rem 0.6rem 0.8rem;
     background-color: var(--azul);
     border-radius: 0.3rem;
@@ -109,45 +107,43 @@ nav {
     cursor: pointer;
     border: 0px;
 }
-.mobile__btn--i {
-    font-size: 20px;
+.nav__mobile--btn i {
+    font-size: 16px;
     color: var(--gris-claro);
 }
-
 .header__banner {
     width: 100%;
 }
 
-main {
+.home__main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-bottom: 2.5rem;
 }
-
-section {
+.home__section {
     width: 16.25rem;
 }
-.section__h2 {
+.home__h2 {
     width: 100%;
-    font-size: 22px;
-    margin: 1.25rem 0 1.25rem 0;
+    font-size: 17px;
+    margin: 1rem 0 0.75rem 0;
     display: flex;
     align-items: center;
+    margin-left: 2rem;
     color: var(--gris-oscuro);
 }
-.section__article {
+.home__article {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
-.div__card {
+.home__card {
     background-color: var(--bg-white);
     margin: auto;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    width: 15.65rem;
+    width: 12rem;
     border-radius: 0.3rem;
 }
 .card__div {
@@ -199,6 +195,125 @@ section {
     font-weight: 500;
 }
 
+.login__main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 0 3rem 0;
+}
+.login__h2 {
+    margin: 1rem 0 1rem 0;
+    color: var(--gris-oscuro);
+}
+.login__form {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.login__input {
+    height: 35px;
+    margin: 15px 0 15px 0;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--font-roboto);
+}
+.login__btn {
+    margin: 10px 0 10px 0;
+    border: 0;
+    height: 35px;
+    border-radius: 5px;
+}
+.login__btn--enviar {
+    background-color: var(--azul);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.register__main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 0 3rem 0;
+}
+.register__h2 {
+    margin: 1rem 0 1rem 0;
+    color: var(--gris-oscuro);
+}
+.register__form {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.register__input {
+    height: 35px;
+    margin: 15px 0 15px 0;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--font-roboto);
+}
+.register__input--m {
+    margin: 20px 0 20px 0;
+}
+.register__label {
+    text-align: center;
+    font-weight: 500;
+}
+.register__input:focus {
+    outline: none;
+}
+.register__perfil {
+    display: flex;
+    justify-content: space-evenly;
+}
+.register__intereses {
+    margin: 10px 0 10px 0.5rem;
+}
+.register__checkbox {
+    margin: 10px 0.5rem 10px 0;
+}
+.register__foto {
+    text-align: center;
+}
+.register__foto--input {
+    display: none;
+}
+.register__foto--label {
+    color: var(--gris-oscuro);
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.register__foto--label:hover {
+    text-decoration: underline;
+}
+.register__foto--label::after {
+    content: "Seleccionar archivo";
+}
+.register__btn {
+    margin: 10px 0 10px 0;
+    border: 0;
+    height: 35px;
+    border-radius: 5px;
+}
+.register__btn--borrar {
+    background-color: var(--azul-oscuro);
+    color: white;
+    cursor: pointer;
+}
+.register__btn--enviar {
+    background-color: var(--azul);
+    color: white;
+    cursor: pointer;
+}
+
 footer {
     background-color: var(--bg-white);
     color: var(--gris-oscuro);
@@ -212,7 +327,7 @@ footer {
     margin: auto;
     font-size: 12px;
 }
-.footer__icons {
+.footer__i {
     color: var(--azul);
     font-size: 2em;
     margin: 2.5rem 0 0.6rem 0;
@@ -223,29 +338,49 @@ footer {
     font-weight: 400;
 }
 
-@media (min-width: 576px) {
-    main {
+@media (min-width: 375px) {
+    .home__main {
         display: block;
-        width: 90%;
+        width: 95%;
         margin: auto;
     }
-    section {
+    .home__section {
         width: 100%;
     }
-    .section__h2 {
+    .home__h2 {
         margin: 1.25rem 0 1.25rem 0;
-        justify-content: start;
-        align-items: flex-start;
+        font-size: 20px;
+        text-align: start;
+        margin-left: 2.5%;
     }
-    .section__article {
-        width: 33rem;
+    .home__article {
+        width: 100%;
         margin: auto;
     }
-    .div__card {
+    .home__card {
         box-shadow: 0px 0px 0.6rem var(--gris-oscuro);
+        width: 46%;
     }
     .card__descripcion {
         display: block;
+    }
+}
+@media (min-width: 425px) {
+    .home__article {
+        width: 90%;
+        margin: auto;
+    }
+    .home__card {
+        width: 45%;
+    }
+}
+@media (min-width: 567px) {
+    .home__article {
+        width: 75%;
+        margin: auto;
+    }
+    .home__card {
+        width: 45%;
     }
 }
 @media (min-width: 768px) {
@@ -266,11 +401,10 @@ footer {
         display: flex;
         justify-content: flex-end;
     }
-    .cuotas-p {
+    .header__cuotas--p {
         text-align: start;
         margin-right: 1.85rem;
     }
-
     .nav__div {
         display: flex;
         justify-content: space-between;
@@ -278,25 +412,56 @@ footer {
     .nav__mobile {
         display: none;
     }
-
-    .section__article {
-        width: 33rem;
-        margin: auto;
-    }
-}
-@media (min-width: 992px) {
-    .section__article {
-        width: 48.5rem;
-        margin: auto;
+    .nav__ul {
+        width: 19rem;
     }
 
-    .div__card {
-        margin: 0.5rem 0 0.5rem 0;
+    .home__article {
+        width: 45rem;
+        margin: auto;
+    }
+    .home__h2 {
+        text-align: start;
+        display: flex;
+        font-size: 22px;
+        align-items: center;
+        margin-left: 0.4rem;
+    }
+    .home__card {
+        width: 10.5rem;
+    }
+
+    .login__form {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .register__form {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    .register__perfil {
+        width: 50%;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+    .register__intereses {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 0;
     }
 }
+
 @media (min-width: 1200px) {
-    .section__article {
-        width: 65rem;
+    .home__article {
+        width: 60rem;
         margin: auto;
+    }
+    .home__card {
+        width: 14rem;
     }
 }
