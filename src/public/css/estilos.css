@@ -3,13 +3,14 @@
 :root {
     /* colors */
     --bg-header: #eac926;
-    --bg-white: #ffffff;
-    --text-black: #181818;
-    --border-gris: #ebebeb;
-    --gris-oscuro: #666;
-    --azul-oscuro: #03264c;
-    --azul: #1259c3;
+    --white: #ffffff;
+    --black: #181818;
     --gris-claro: #ebebeb;
+    --gris-oscuro: #666;
+    --azul: #1259c3;
+    --azul-intermedio: #0022AA;
+    --azul-oscuro: #03264c;
+    --azul-negro: #02152a;
     --verde: #39b54a;
     /* fonts */
     --font-roboto: "Roboto", sans-serif;
@@ -22,7 +23,7 @@
 }
 
 body {
-    color: var(--text-black);
+    color: var(--black);
     font-family: var(--font-roboto);
     background-color: var(--gris-claro);
 }
@@ -63,7 +64,7 @@ header {
     border: 0;
     border-radius: 0 0.5rem 0.5rem 0;
     padding-right: 0.3rem;
-    background-color: var(--bg-white);
+    background-color: var(--white);
 }
 .header__cuotas {
     width: 100%;
@@ -88,13 +89,12 @@ nav {
     margin-bottom: 0.1rem;
 }
 .nav__a {
-    color: var(--text-black);
+    color: var(--black);
     text-decoration: none;
 }
 .nav__a:hover {
-    text-decoration: underline 1px solid black;
+    text-decoration: underline 1px solid var(--black);
 }
-
 .nav__mobile {
     width: 100%;
     text-align: center;
@@ -137,20 +137,29 @@ nav {
 .home__article {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 .home__card {
-    background-color: var(--bg-white);
+    background-color: var(--white);
     margin: auto;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     width: 12rem;
+    height: 16rem;
     border-radius: 0.3rem;
+    transition: 0.3s;
+}
+.home__card:hover {
+    height: 18rem;
+    box-shadow: 0px 0px 0.6rem var(--gris-oscuro);
 }
 .card__div {
     width: 100%;
-    border-top: 1px solid var(--border-gris);
+    border-top: 1px solid var(--gris-claro);
     padding: 8%;
     position: relative;
+    height: 4.5rem;
+    transition: height 0.3s;
 }
 .card__img {
     width: 100%;
@@ -164,11 +173,15 @@ nav {
     height: 1.85rem;
     border: 1px solid var(--verde);
     color: var(--verde);
-    background-color: var(--bg-white);
+    background-color: var(--white);
     border-radius: 50%;
     position: absolute;
     right: 1.25rem;
     top: -1rem;
+    transition: 0.3s;
+}
+.card__envio:hover {
+    transform: rotate(-90deg)
 }
 .card__importe {
     display: flex;
@@ -187,86 +200,82 @@ nav {
     color: var(--verde);
 }
 .card__descripcion {
-    display: none;
     font-size: 16px;
     color: var(--gris-oscuro);
     margin-top: 0.6rem;
     margin-bottom: 0.3rem;
     font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.home__card:hover .card__descripcion {
+    opacity: 1;
 }
 
-.login__main {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 1rem 0 3rem 0;
-}
-.login__h2 {
-    margin: 1rem 0 1rem 0;
-    color: var(--gris-oscuro);
-}
-.login__form {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-}
-.login__input {
-    height: 35px;
-    margin: 15px 0 15px 0;
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    border-radius: 5px;
-    font-family: var(--font-roboto);
-}
-.login__btn {
-    margin: 10px 0 10px 0;
-    border: 0;
-    height: 35px;
-    border-radius: 5px;
-}
-.login__btn--enviar {
-    background-color: var(--azul);
-    color: white;
-    cursor: pointer;
-    width: 100%;
-}
-
+.login__main,
 .register__main {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 1rem 0 3rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0 3rem 0;
 }
+.login__h2,
 .register__h2 {
-    margin: 1rem 0 1rem 0;
-    color: var(--gris-oscuro);
+  margin: 1rem 0 1rem 0;
+  color: var(--gris-oscuro);
 }
+.login__form,
 .register__form {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
 }
+.login__input,
 .register__input {
-    height: 35px;
-    margin: 15px 0 15px 0;
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    border-radius: 5px;
-    font-family: var(--font-roboto);
+  height: 35px;
+  margin: 15px 0 15px 0;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  font-family: var(--font-roboto);
 }
-.register__input--m {
+.login__input:focus,
+.register__input:focus {
+    outline: none;
+}
+.login__btn,
+.register__btn {
+  margin: 10px 0 10px 0;
+  border: 0;
+  height: 35px;
+  border-radius: 5px;
+}
+.login__btn--enviar,
+.register__btn--borrar,
+.register__btn--enviar {
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+.login__btn--enviar,
+.register__btn--enviar {
+    background-color: var(--azul);
+    color: var(--white);
+}
+.login__btn--enviar:hover,
+.register__btn--enviar:hover {
+    background-color: var(--azul-intermedio);
+}
+
+.input-m {
     margin: 20px 0 20px 0;
 }
+
 .register__label {
     text-align: center;
     font-weight: 500;
-}
-.register__input:focus {
-    outline: none;
 }
 .register__perfil {
     display: flex;
@@ -297,25 +306,16 @@ nav {
 .register__foto--label::after {
     content: "Seleccionar archivo";
 }
-.register__btn {
-    margin: 10px 0 10px 0;
-    border: 0;
-    height: 35px;
-    border-radius: 5px;
-}
 .register__btn--borrar {
     background-color: var(--azul-oscuro);
-    color: white;
-    cursor: pointer;
+    color: var(--white);
 }
-.register__btn--enviar {
-    background-color: var(--azul);
-    color: white;
-    cursor: pointer;
+.register__btn--borrar:hover {
+    background-color: var(--azul-negro);
 }
 
 footer {
-    background-color: var(--bg-white);
+    background-color: var(--white);
     color: var(--gris-oscuro);
 }
 .footer__div {
@@ -354,33 +354,30 @@ footer {
         margin-left: 2.5%;
     }
     .home__article {
-        width: 100%;
+        width: 22rem;
         margin: auto;
     }
     .home__card {
-        box-shadow: 0px 0px 0.6rem var(--gris-oscuro);
-        width: 46%;
-    }
-    .card__descripcion {
-        display: block;
+        width: 10.3rem;
+        height: 14.5rem;
     }
 }
 @media (min-width: 425px) {
     .home__article {
-        width: 90%;
-        margin: auto;
+        width: 24rem;
     }
     .home__card {
-        width: 45%;
+        width: 11rem;
+        height: 15rem;
     }
 }
 @media (min-width: 567px) {
     .home__article {
-        width: 75%;
-        margin: auto;
+        width: 26rem;
     }
     .home__card {
-        width: 45%;
+        width: 12rem;
+        height: 16rem;
     }
 }
 @media (min-width: 768px) {
@@ -390,7 +387,7 @@ footer {
     .header__logo {
         width: 33%;
     }
-    .logo__img {
+    .header__logo--img {
         margin-left: 0.8rem;
     }
     .header__search {
@@ -409,43 +406,38 @@ footer {
         display: flex;
         justify-content: space-between;
     }
-    .nav__mobile {
-        display: none;
-    }
     .nav__ul {
         width: 19rem;
+    }
+    .nav__mobile {
+        display: none;
     }
 
     .home__article {
         width: 45rem;
-        margin: auto;
     }
     .home__h2 {
         text-align: start;
         display: flex;
         font-size: 22px;
         align-items: center;
-        margin-left: 0.4rem;
+        margin: 1.5rem 0 1rem 0.4rem;
     }
     .home__card {
         width: 10.5rem;
+        height: 15rem;
+    }
+    .home__card:hover {
+        height: 17.5rem;
     }
 
-    .login__form {
-        width: 500px;
-        display: flex;
-        flex-direction: column;
-    }
-
+    .login__form,
     .register__form {
         width: 500px;
-        display: flex;
-        flex-direction: column;
     }
     .register__perfil {
         width: 50%;
         margin: auto;
-        justify-content: space-evenly;
     }
     .register__intereses {
         display: flex;
@@ -454,14 +446,33 @@ footer {
         flex-wrap: wrap;
         margin-left: 0;
     }
-}
 
-@media (min-width: 1200px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 18rem;
+    }
+    .footer__div {
+        width: 33.3%;
+    }
+    .footer__p {
+        width: 75%;
+        font-size: 13px;
+    }
+    .footer__copy {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
     .home__article {
-        width: 60rem;
-        margin: auto;
+        width: 55rem;
     }
     .home__card {
-        width: 14rem;
+        width: 13rem;
+        height: 17.5rem;
+    }
+    .home__card:hover {
+        height: 19rem;
     }
 }
