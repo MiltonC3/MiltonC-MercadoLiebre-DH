@@ -8,7 +8,7 @@
     --gris-claro: #ebebeb;
     --gris-oscuro: #666;
     --azul: #1259c3;
-    --azul-intermedio: #0022AA;
+    --azul-intermedio: #0022aa;
     --azul-oscuro: #03264c;
     --azul-negro: #02152a;
     --verde: #39b54a;
@@ -123,34 +123,35 @@ nav {
     padding-bottom: 2.5rem;
 }
 .home__section {
-    width: 16.25rem;
-}
-.home__h2 {
     width: 100%;
-    font-size: 17px;
-    margin: 1rem 0 0.75rem 0;
-    display: flex;
-    align-items: center;
-    margin-left: 2rem;
-    color: var(--gris-oscuro);
 }
 .home__article {
     display: flex;
+    margin: auto;
+    width: 14rem;
     flex-wrap: wrap;
     position: relative;
+}
+.home__h2 {
+    width: 100%;
+    font-size: 18.5px;
+    margin: 1rem 0 0.75rem 0.2rem;
+    display: flex;
+    align-items: center;
+    color: var(--gris-oscuro);
 }
 .home__card {
     background-color: var(--white);
     margin: auto;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    width: 12rem;
-    height: 16rem;
+    width: 13.5rem;
+    height: 18rem;
     border-radius: 0.3rem;
     transition: 0.3s;
 }
 .home__card:hover {
-    height: 18rem;
+    height: 19.5rem;
     box-shadow: 0px 0px 0.6rem var(--gris-oscuro);
 }
 .card__div {
@@ -181,7 +182,7 @@ nav {
     transition: 0.3s;
 }
 .card__envio:hover {
-    transform: rotate(-90deg)
+    transform: rotate(-90deg);
 }
 .card__importe {
     display: flex;
@@ -214,32 +215,32 @@ nav {
 
 .login__main,
 .register__main {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 1rem 0 3rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 0 3rem 0;
 }
 .login__h2,
 .register__h2 {
-  margin: 1rem 0 1rem 0;
-  color: var(--gris-oscuro);
+    margin: 1rem 0 1rem 0;
+    color: var(--gris-oscuro);
 }
 .login__form,
 .register__form {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
 }
 .login__input,
 .register__input {
-  height: 35px;
-  margin: 15px 0 15px 0;
-  width: 100%;
-  padding: 10px;
-  border: 0;
-  border-radius: 5px;
-  font-family: var(--font-roboto);
+    height: 35px;
+    margin: 15px 0 15px 0;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--font-roboto);
 }
 .login__input:focus,
 .register__input:focus {
@@ -247,17 +248,17 @@ nav {
 }
 .login__btn,
 .register__btn {
-  margin: 10px 0 10px 0;
-  border: 0;
-  height: 35px;
-  border-radius: 5px;
+    margin: 10px 0 10px 0;
+    border: 0;
+    height: 35px;
+    border-radius: 5px;
 }
 .login__btn--enviar,
 .register__btn--borrar,
 .register__btn--enviar {
-  cursor: pointer;
-  width: 100%;
-  transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
 }
 .login__btn--enviar,
 .register__btn--enviar {
@@ -276,6 +277,7 @@ nav {
 .register__label {
     text-align: center;
     font-weight: 500;
+    font-size: 18px;
 }
 .register__perfil {
     display: flex;
@@ -338,48 +340,16 @@ footer {
     font-weight: 400;
 }
 
-@media (min-width: 375px) {
-    .home__main {
-        display: block;
-        width: 95%;
-        margin: auto;
-    }
-    .home__section {
-        width: 100%;
+@media (min-width: 475px) {
+    .home__article {
+        width: 28.5rem;
     }
     .home__h2 {
-        margin: 1.25rem 0 1.25rem 0;
+        margin: 1.25rem 0 1rem 0.3rem;
         font-size: 20px;
-        text-align: start;
-        margin-left: 2.5%;
-    }
-    .home__article {
-        width: 22rem;
-        margin: auto;
-    }
-    .home__card {
-        width: 10.3rem;
-        height: 14.5rem;
     }
 }
-@media (min-width: 425px) {
-    .home__article {
-        width: 24rem;
-    }
-    .home__card {
-        width: 11rem;
-        height: 15rem;
-    }
-}
-@media (min-width: 567px) {
-    .home__article {
-        width: 26rem;
-    }
-    .home__card {
-        width: 12rem;
-        height: 16rem;
-    }
-}
+
 @media (min-width: 768px) {
     header {
         justify-content: space-between;
@@ -389,6 +359,7 @@ footer {
     }
     .header__logo--img {
         margin-left: 0.8rem;
+        width: 11rem;
     }
     .header__search {
         width: 33%;
@@ -399,7 +370,6 @@ footer {
         justify-content: flex-end;
     }
     .header__cuotas--p {
-        text-align: start;
         margin-right: 1.85rem;
     }
     .nav__div {
@@ -412,23 +382,19 @@ footer {
     .nav__mobile {
         display: none;
     }
-
     .home__article {
-        width: 45rem;
+        width: 44rem;
     }
     .home__h2 {
-        text-align: start;
-        display: flex;
         font-size: 22px;
-        align-items: center;
         margin: 1.5rem 0 1rem 0.4rem;
     }
     .home__card {
-        width: 10.5rem;
-        height: 15rem;
+        width: 14rem;
+        height: 18.5rem;
     }
     .home__card:hover {
-        height: 17.5rem;
+        height: 20rem;
     }
 
     .login__form,
@@ -451,6 +417,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: space-around;
         height: 18rem;
     }
     .footer__div {
@@ -466,13 +433,6 @@ footer {
 }
 @media (min-width: 992px) {
     .home__article {
-        width: 55rem;
-    }
-    .home__card {
-        width: 13rem;
-        height: 17.5rem;
-    }
-    .home__card:hover {
-        height: 19rem;
+        width: 59rem;
     }
 }
