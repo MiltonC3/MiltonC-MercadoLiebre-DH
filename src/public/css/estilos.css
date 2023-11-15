@@ -358,17 +358,17 @@ footer {
         justify-content: space-between;
     }
     .header__logo {
-        width: 33%;
+        width: 33.3%;
     }
     .header__logo--img {
         margin-left: 0.8rem;
         width: 11rem;
     }
     .header__search {
-        width: 33%;
+        width: 33.3%;
     }
     .header__cuotas {
-        width: 33%;
+        width: 33.3%;
         display: flex;
         justify-content: flex-end;
     }
