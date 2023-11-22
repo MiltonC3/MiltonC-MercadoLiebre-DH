@@ -73,11 +73,11 @@
         <main class="register__main">
             <h2 class="register__h2">Crea tu cuenta!!</h2>
             <form class="register__form" action="/">
-                <input class="register__input" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required>
+                <input class="register__input" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required minlength="6">
 
-                <input class="register__input" type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required>
+                <input class="register__input" type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required minlength="4">
 
-                <input class="register__input" type="email" name="email" id="email" placeholder="E-mail" required>
+                <input class="register__input" type="email" name="email" id="email" placeholder="E-mail" required minlength="8">
                 
                 <label class="register__label" for="nacimiento">Fecha de Nacimiento</label>
                 <input class="register__input" type="date" name="nacimiento" id="nacimiento" required>
